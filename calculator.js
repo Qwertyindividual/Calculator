@@ -1,5 +1,15 @@
 
 let sum = document.getElementById("input");
+const decimal = document.getElementById("decimal").value;
+
+function display(num) {
+  sum.value += num;
+  if (decimal === ".") {
+    document.getElementById("decimal").disabled = false;
+  } else {
+    document.getElementById("decimal").disabled = true;
+  }
+}
 
 let calculate = (number) => {
   sum.value += number;
@@ -7,6 +17,13 @@ let calculate = (number) => {
 let addToSum = (operator) => {
   sum.value += operator;
  
+};
+function clearSum() {
+  sum.value = " ";
+}
+
+function deleteSum() {
+  sum.value = sum.value.slice(0, -1);
 };
 
 let evaluateSum = () => {
@@ -20,26 +37,8 @@ let evaluateSum = () => {
   }
 } 
 
-function clearSum() {
-  sum.value = "0";
-}
 
-function deleteSum() {
-  sum.value = sum.value.slice(0, -1);
-};
 
-function inputDecimal(dot) {
-  // If the `displayValue` property does not contain a decimal point
-  if (!calculator.displayValue.includes(dot)) {
-    // Append the decimal point
-    calculator.displayValue += dot;
-  }
-}
-// function decimal() {
-//   if('.' > 1) {
-//   return " ";
-//   } else {
-//     return "."
-//   }
-// };
+
+
 
