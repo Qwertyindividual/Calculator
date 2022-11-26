@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-          <div class="calc">
+          <div class="calculator">
             <!--- Input section --->
             <input type="text" id="input" placeholder="0" />
             <!--- Buttons --->
@@ -28,9 +28,9 @@
             <button value="8" onclick="calculate(8)">8</button>
             <button value="9" onclick="calculate(9)">9</button>
             <button value="+" class="operators" onclick="addToSum('+')">+</button>
-            <button value="." onclick="displayDecimal('.')">.</button>
+            <button value="." onclick="calculate('.')">.</button>
             <button value="0" onclick="calculate(0)">0</button>
-            <button value="=" class="equal" onclick="evaluateSum()">=</button>
+            <button value="=" class="equal" onclick="evaluateSum(); decimal() ">=</button>
           </div>
     </div>
     <script src="./calculator.js"></script>
